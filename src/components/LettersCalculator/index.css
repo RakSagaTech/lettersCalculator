@@ -82,7 +82,7 @@
 
 .letters-count {
   background-color: #ffffff;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 24px;
   font-weight: bold;
   color: #219a6f;
@@ -92,8 +92,8 @@
   align-self: center;
 }
 
-@media screen and (min-width: 768px){
-  .letters-count{
+@media screen and (min-width: 768px) {
+  .letters-count {
     align-self: flex-start;
     padding: 24px;
     padding-right: 32px;

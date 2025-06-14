@@ -5,7 +5,16 @@ import {Component} from 'react'
 import './index.css'
 
 class LettersCalculator extends Component {
+  state = {
+    inputPhrase: '',
+  }
+
+  onChangeInput = event => {
+    this.setState({inputPhrase: event.target.value})
+  }
+
   render() {
+    const {inputPhrase} = this.state
     return (
       <div className="app-container">
         <div className="letters-calculator-container">
@@ -21,9 +30,13 @@ class LettersCalculator extends Component {
                 id="phraseText"
                 placeholder="Enter the phrase"
                 className="phrase-input"
+                onChange={this.onChangeInput}
               />
             </div>
-            <p className="letters-count"> No.of letters: 0</p>
+            <p className="letters-count">
+              {' '}
+              No.of letters: {inputPhrase.length}
+            </p>
           </div>
           <img
             src="https://assets.ccbp.in/frontend/react-js/stop-watch-with-calculator-img.png"
